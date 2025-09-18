@@ -299,6 +299,46 @@
             font-weight: 600;
         }
 
+        .github-link {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            padding: 12px 16px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .github-link:hover {
+            background: rgba(255,255,255,1);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .github-link::before {
+            content: "⭐";
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .github-link {
+                top: 10px;
+                right: 10px;
+                padding: 10px 12px;
+                font-size: 0.8rem;
+            }
+        }
+
         @keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -338,6 +378,8 @@
     </style>
 </head>
 <body>
+    <a href="https://github.com/SaegusaMayumi1234/Simlitbinus-ID-Generator" target="_blank" class="github-link">View on GitHub</a>
+    
     <div class="container">
         <header>
             <h1>🚀 Simlitbinus ID Generator</h1>
